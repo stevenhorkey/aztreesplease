@@ -1,0 +1,54 @@
+#mainNav {
+    background-color: #557b21;
+    font-family: 'Raleway';
+    }
+    
+    #mainNav .navbar-brand {
+    color: #ddcd3e;
+    }
+    
+    #mainNav .navbar-nav .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 800;
+    }
+    
+    #mainNav .navbar-nav .nav-item.active .nav-link {
+        color: #ddcd3e;
+        text-decoration: none;
+    }
+    .js-scroll-trigger{
+        color: white !important;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    .nav-link:hover{
+        transform: scale(1.12);
+    }
+    #menu-text{
+        position: relative;
+        top: 2px;
+        font-family: 'Raleway';	
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .navbar-dark .navbar-toggler {
+        color: white;
+        border-color: rgba(255,255,255,.1);
+    }
+    @media (min-width: 992px) {
+    #mainNav .navbar-nav .nav-item .nav-link {
+        font-size: 0.9rem;
+    }
+    #mainNav .navbar-nav .nav-item .nav-link:hover {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    #mainNav .navbar-nav .nav-item.active .nav-link:hover {
+        color: #ddcd3e;
+    }
+    }
+    @media screen and (max-width: 768px){
+        #nav-icons{
+            margin: 0 auto;
+        }
+    }

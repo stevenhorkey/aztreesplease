@@ -1,0 +1,59 @@
+.page-section{
+    min-height: fit-content;
+}
+
+#asdf{
+    position: absolute; left: -5000px;
+}
+
+iframe{
+    border: 0;
+}
+
+/* Contact */
+#map{
+	height: 370px;
+}
+.contact{
+    height: fit-content;
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1521352619687-906f4ab02d57?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f4b3bfc735ec0619b0cde41f7239cfdf&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#contact-info{
+	width: 100%;
+	font-family: 'Raleway';
+	margin-top: 0;
+	
+}
+@media screen and (max-width:992px){
+	#map{
+		height:467px;
+	}
+}
+
+/* Email Signup Form - MailChimp */
+#mc_embed_signup{
+	background:rgba(255, 255, 255, 0.85); 
+	clear:left; 
+	font:14px Helvetica,Arial,sans-serif; 
+	border-radius: 5px;
+	margin: 20px 0;
+	padding: 10px;
+}
+#mc_embed_signup input.email{
+	width: 100%;
+}
+.email-title{
+	font-size: 40px !important;
+}
+.email-p{
+	text-align: center;
+	font-family: 'gaegu', sans-serif;
+	font-size: 20px;
+}
+#mc_embed_signup input.button{
+	background: #557b21;
+}
