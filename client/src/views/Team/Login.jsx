@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import {Redirect} from 'react-router';
 
+import './auth.css';
+
 class Login extends React.Component{
 
     state = {
@@ -27,9 +29,11 @@ class Login extends React.Component{
                 password: this.state.password
             }).then(res => {
                 console.log(res);
-                // this.setState({
-                //     redirect: true
-                // })
+                localStorage.setItem('jwtToken', res.data.token);
+                // Redirect to team page if success
+                this.setState({
+                    redirect: true
+                })
             }).catch((err) => {
                 console.log(err);
                 this.setState({
@@ -45,12 +49,14 @@ class Login extends React.Component{
             )
         } else{
             return(
-                <div id='login'>
-                    <h1 className='text-center mb-5 text-uppercase display-3'><strong>Login</strong></h1>
+                <div className='container p-5 text-justify'>
+                
+                <div className='white-modal col-md-6 p-5 mx-auto' id='login'>
+                    <h1 className='text-center mb-5 text-uppercase display-3 mt-2'><strong>Login</strong></h1>
     
-                    <div className='row'>
-                        <p className='mx-auto'>Please login if you are a team member and would like to access additional content...</p>
-                        <form className='col-md-6 mx-auto'>
+                    <div className=''>
+                        <p className='mx-auto text-center'>Please login if you are a team member and would like to access additional content...</p>
+                        <form className='mx-auto'>
                             <input className='w-100 d-block my-3 p-1' type='text' name='email' onChange={this.handleChange} value={this.state.email} placeholder='Email' required/>
                             <input className='w-100 d-block my-3 p-1' type='password' name='password' onChange={this.handleChange} value={this.state.password} placeholder='Password' required/>
                             <p className='w-100 d-block mb-3 p-1 text-center small text-red'>{this.state.message}</p>
@@ -59,6 +65,8 @@ class Login extends React.Component{
                     </div>
     
                 </div>
+                </div>
+                
             )
         }
         

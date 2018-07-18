@@ -3,6 +3,8 @@ import axios from 'axios';
 import {Redirect} from 'react-router';
 import {Link} from 'react-router-dom';
 
+import './auth.css';
+
 class Login extends React.Component{
 
     state = {
@@ -86,15 +88,19 @@ class Login extends React.Component{
         } else{
         // Render signup page if user has yet to create user or be logged in
             return(
-                <div id='signup'>
-                    <h1 className='text-center mb-5 text-uppercase display-3'><strong>Sign Up</strong></h1>
+                <div className='container p-5 text-justify'>
+                
+                <div className='white-modal col-md-6 p-5 mx-auto' id='signup'>
+                    <h1 className='text-center mb-5 text-uppercase display-3 mt-2'><strong>Sign Up</strong></h1>
     
-                    <div className='row'>
-                        <p className='mx-auto'>Please sign up if you would like to access exclusive team member content or <Link to={'/login'}>login</Link>...</p>
-                        <form className='col-md-6 mx-auto'>
-                            <div className='row'>
-                                <input className='col-md-6 w-100 d-block my-3 p-1' type='text' name='firstName' onChange={this.handleChange} value={this.state.firstName} placeholder='John' required/>
-                                <input className='col-md-6 w-100 d-block my-3 p-1' type='text' name='lastName' onChange={this.handleChange} value={this.state.lastName} placeholder='Gardner' required/>
+                    <div className=''>
+                        <p className='mx-auto text-center'>Please sign up if you would like to access exclusive team member content or <Link to={'/login'}>login</Link>...</p>
+                        <form className='mx-auto'>
+                            <div className=''>
+                                <span className=''>
+                                    <input className='col-md-6 d-block my-3 p-1 float-left' type='text' name='firstName' onChange={this.handleChange} value={this.state.firstName} placeholder='John' required/>
+                                    <input className='col-md-6 d-block my-3 p-1 float-right' type='text' name='lastName' onChange={this.handleChange} value={this.state.lastName} placeholder='Gardner' required/>
+                                </span>
                                 <input className='col-12 w-100 d-block my-3 p-1' type='text' name='email' onChange={this.handleChange} value={this.state.email} placeholder='johngardner@email.com' required/>
                                 <input className='col-12 w-100 d-block my-3 p-1' type='password' name='password' onChange={this.handleChange} value={this.state.password} placeholder='********' required/>
                                 <p className='w-100 d-block mb-3 p-1 text-center small text-red'>{this.state.message}</p>
@@ -104,6 +110,8 @@ class Login extends React.Component{
                     </div>
     
                 </div>
+                </div>
+                
             )
         }
         

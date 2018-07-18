@@ -7,6 +7,19 @@ var jwt = require('jsonwebtoken');
 var router = express.Router();
 var User = require("../models/user");
 
+getToken = function (headers) {
+  if (headers && headers.authorization) {
+      var parted = headers.authorization.split(' ');
+      if (parted.length === 2) {
+          return parted[1];
+      } else {
+          return null;
+      }
+  } else {
+      return null;
+  }
+};
+
 router.post('/signup', function(req, res) {
     // check if they passed email, password, and full name
     if (!req.body.email || !req.body.password ||!req.body.firstName || !req.body.lastName) {
@@ -50,6 +63,22 @@ router.post('/login', function(req, res) {
         });
       }
     });
+});
+
+router.get('/', passport.authenticate('jwt', { session: false }), function (req, res) {
+  console.log("inside router jwt route");
+  var token = getToken(req.headers);
+  if (token) {
+      console.log(req.user)
+      res.status(200).send({
+          success: true,
+          user: req.user
+      })
+  }
+  else {
+      return res.status(403).send({ success: false, msg: 'Unauthorized.' });
+  }
+
 });
 
 module.exports = router;
