@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://stevenhorkey.github.io/aztreesplease",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "netlify": "^1.2.0",
+    "path": "^0.12.7",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-image-gallery": "^0.8.9",
@@ -19,7 +23,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "surge": "react-scripts build && cp build/index.html build/200.html"
- 
   },
   "devDependencies": {
     "gh-pages": "^1.2.0"

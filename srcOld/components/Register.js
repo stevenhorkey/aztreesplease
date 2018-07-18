@@ -13,6 +13,7 @@ class Create extends Component {
       password: ''
     };
   }
+  
   onChange = (e) => {
     const state = this.state
     state[e.target.name] = e.target.value;

@@ -15,6 +15,7 @@ import Jobs from './views/Jobs/Jobs';
 import Staff from './views/Staff/Staff';
 import Groasis from './views/Groasis/Groasis';
 import Login from './views/Team/Login';
+import Signup from './views/Team/Signup';
 
 class Main extends Component{
     render(){
@@ -26,6 +27,7 @@ class Main extends Component{
                         <Header/>
                         <Navbar/>
                         <Switch>
+                                <Route exact path='/' component={Home}/>
                             <div className='container bg-white p-5 text-justify'>
                                 <Route path='/programs' component={Programs}/>
                                 <Route path='/highlights' component={Highlights}/>
@@ -33,10 +35,10 @@ class Main extends Component{
                                 <Route path='/jobs' component={Jobs}/>
                                 <Route path='/staff' component={Staff}/>
                                 <Route path='/groasis' component={Groasis}/>
-                                <Route path='/team' component={Login}/>
+                                <Route path='/login' component={Login}/>
+                                <Route path='/signup' component={Signup}/>
                                 <Route path='/team-content' component={() => window.location = 'https://drive.google.com/drive/folders/1utHQRovogfFscGu18VVT730_-J9FHADi?usp=sharing'}/>
                             </div>
-                                <Route exact path='/' component={Home}/>
                         </Switch>
                         <Footer/>
                     </div>

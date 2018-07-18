@@ -3,21 +3,27 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+require('dotenv').config()
 
 var book = require('./routes/book');
 var app = express();
+app.set('view engine', 'ejs');
 var mongoose = require('mongoose');
 
 var auth = require('./routes/auth');
 
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/mern-secure', { promiseLibrary: require('bluebird') })
-  .then(() =>  console.log('connection succesful'))
+mongoose.connect('mongodb://localhost/aztreesplease', { promiseLibrary: require('bluebird') })
+  .then(() =>  console.log('connection successful'))
   .catch((err) => console.error(err));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
-app.use(express.static(path.join(__dirname, 'client/build')));
+if (process.env.NODE_ENV === 'production') {
+  console.log('in the static express build');
+  app.use(express.static(path.join(__dirname, '/client/build')));
+}
+
 
 app.use('/api/book', book);
 app.use('/api/auth', auth);
