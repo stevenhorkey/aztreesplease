@@ -33,7 +33,7 @@ class Main extends Component{
                                 <Route path='/login' component={Login}/>
                                 <Route path='/signup' component={Signup}/>
                                 <Route path='/signup' component={Signup}/>
-                                <AuthRoute path='/team' component={Dashboard}/>
+                                <AuthRoute path='/team' component={Dashboard}/>                                                                
                             <div className='container bg-white p-5 text-justify'>
                                 <Route path='/programs' component={Programs}/>
                                 <Route path='/highlights' component={Highlights}/>
