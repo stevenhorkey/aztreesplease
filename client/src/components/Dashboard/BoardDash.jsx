@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Card from '../../components/Card/Card';
 
 class BoardDash extends React.Component{
 
@@ -14,7 +15,22 @@ class BoardDash extends React.Component{
         
         return(
             <div>
-
+                <Card
+                title='Board Documents'
+                url='#'
+                />
+                <Card
+                title='Committee 1'
+                url='#'
+                />
+                <Card
+                title='Committee 2'
+                url='#'
+                />
+                <Card
+                title='Committee 3'
+                url='#'
+                />
             </div>
         )
  

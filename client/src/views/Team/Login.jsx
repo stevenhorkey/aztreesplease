@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {Redirect} from 'react-router';
+import {Redirect, Link} from 'react-router-dom';
 
 import './auth.css';
 
@@ -55,7 +55,7 @@ class Login extends React.Component{
                     <h1 className='text-center mb-5 text-uppercase display-3 mt-2'><strong>Login</strong></h1>
     
                     <div className=''>
-                        <p className='mx-auto text-center'>Please login if you are a team member and would like to access additional content...</p>
+                        <p className='mx-auto text-center'>Please login if you are a team member and would like to access additional content or <Link to={'/signup'}><a>sign up here</a></Link>...</p>
                         <form className='mx-auto'>
                             <input className='w-100 d-block my-3 p-1' type='text' name='email' onChange={this.handleChange} value={this.state.email} placeholder='Email' required/>
                             <input className='w-100 d-block my-3 p-1' type='password' name='password' onChange={this.handleChange} value={this.state.password} placeholder='Password' required/>

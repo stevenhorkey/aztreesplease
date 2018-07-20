@@ -94,7 +94,7 @@ class Login extends React.Component{
                     <h1 className='text-center mb-5 text-uppercase display-3 mt-2'><strong>Sign Up</strong></h1>
     
                     <div className=''>
-                        <p className='mx-auto text-center'>Please sign up if you would like to access exclusive team member content or <Link to={'/login'}>login</Link>...</p>
+                        <p className='mx-auto text-center'>Please sign up if you would like to access exclusive team member content or <Link to={'/login'}><a>login here</a></Link>...</p>
                         <form className='mx-auto'>
                             <div className=''>
                                 <span className=''>
