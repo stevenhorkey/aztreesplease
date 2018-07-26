@@ -65,7 +65,7 @@ router.post('/login', function(req, res) {
     });
 });
 
-router.get('/', passport.authenticate('jwt', { session: false }), function (req, res) {
+router.post('/', passport.authenticate('jwt', { session: false }), function (req, res) {
   console.log("inside router jwt route");
   var token = getToken(req.headers);
   if (token) {

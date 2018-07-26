@@ -21,11 +21,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 if (process.env.NODE_ENV === 'production') {
   console.log('in the static express build');
-  app.use(express.static(path.join(__dirname, '/client/build')));
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
 }
 
 
-app.use('/api/book', book);
+// app.use('/api/book', book);
 app.use('/api/auth', auth);
 
 // catch 404 and forward to error handler
@@ -43,7 +46,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('error');
 });
 
 module.exports = app;

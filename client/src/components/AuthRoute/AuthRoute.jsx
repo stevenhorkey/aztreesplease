@@ -17,7 +17,8 @@ class AuthRoute extends Component{
         console.log(localStorage.getItem('jwtToken'));
         axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
 
-        axios.get("/api/auth").then(res => {
+        axios.post("/api/auth").then(res => {
+            console.log(res);
             this.setState({
                 user: res.data.user,
                 success: res.data.success
