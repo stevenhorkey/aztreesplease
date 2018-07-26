@@ -1296,4 +1296,6 @@ article{
 .text-red{
 	color: red;
 }
-
+.cursor-pointer{
+	cursor: pointer;
+}

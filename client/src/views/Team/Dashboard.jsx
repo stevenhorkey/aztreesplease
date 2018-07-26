@@ -18,6 +18,11 @@ class Dashboard extends React.Component{
         redirect: false
     }
 
+    logout = () => {
+        localStorage.removeItem('jwtToken');
+        window.location.reload();
+    }
+
     handleNav = event => {
         event.preventDefault();
         const name = event.target.name;
@@ -50,9 +55,10 @@ class Dashboard extends React.Component{
                 <h1 className='text-center mb-5 text-uppercase display-5'><strong>Team Dashboard</strong></h1>
                 <nav className="navbar navbar-dark bg-dark">
                     <a className="navbar-brand raleway" href="#">{this.props.user.firstName} {this.props.user.lastName}</a>
-                    <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler collapsed ml-auto mr-3" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="text-uppercase raleway">Menu</span>
                     </button>
+                    <span onClick={this.logout} className='text-uppercase raleway text-white cursor-pointer'>Logout <i class="fas fa-sign-out-alt"></i></span>
 
                     <div className="navbar-collapse collapse" id="navbarsExample01">
                         <ul className="navbar-nav mr-auto raleway">
