@@ -63,19 +63,19 @@ class Dashboard extends React.Component{
                     <div className="navbar-collapse collapse" id="navbarsExample01">
                         <ul className="navbar-nav mr-auto raleway">
                             <li className="nav-item active" onClick={this.handleNav}>
-                                <a className="nav-link" href="#" name='calendar'>Calendar <span className="sr-only">(current)</span></a>
+                                <a className="nav-link" href="/calendar" name='calendar'>Calendar <span className="sr-only">(current)</span></a>
                             </li>
                             <li className="nav-item" onClick={this.handleNav}>
-                                <a className="nav-link" href="#" name='board'>Board</a>
+                                <a className="nav-link" href="/board" name='board'>Board</a>
                             </li>
                             <li className="nav-item" onClick={this.handleNav}>
-                                <a className="nav-link" href="#" name='members'>Members</a>
+                                <a className="nav-link" href="/members" name='members'>Members</a>
                             </li>
                             <li className="nav-item" onClick={this.handleNav}>
-                                <a className="nav-link" href="#" name='committees'>Committees</a>
+                                <a className="nav-link" href="/committee" name='committees'>Committees</a>
                             </li>
                             <li className="nav-item" onClick={this.handleNav}>
-                                <a className="nav-link" href="#" name='volunteers'>Volunteers</a>
+                                <a className="nav-link" href="/volunteers" name='volunteers'>Volunteers</a>
                             </li>
                         </ul>
                     </div>

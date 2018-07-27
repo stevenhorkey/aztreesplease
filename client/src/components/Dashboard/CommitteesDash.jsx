@@ -17,19 +17,19 @@ class CommitteesDash extends React.Component{
             <div>
                 <Card
                 title='Committee Documents'
-                url='#'
+                url='https://drive.google.com/drive/folders/1utHQRovogfFscGu18VVT730_-J9FHADi'
                 />
                 <Card
-                title='Committee 1'
-                url='#'
+                title='Fundraising & Events Committee'
+                url='https://www.facebook.com/groups/tpfestival/about/'
                 />
                 <Card
-                title='Committee 2'
-                url='#'
+                title='Garden Committee'
+                url='https://www.facebook.com/groups/tpgardens/about/'
                 />
                 <Card
-                title='Committee 3'
-                url='#'
+                title='Habitat Restoration Committee'
+                url='https://www.facebook.com/groups/tprestoration/about/'
                 />
             </div>
         )

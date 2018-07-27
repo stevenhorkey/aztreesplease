@@ -52,12 +52,12 @@ class Navbar extends Component{
                         <li className="nav-item px-lg-4">
                         <a className="nav-link text-uppercase text-expanded" href="https://drive.google.com/drive/folders/1utHQRovogfFscGu18VVT730_-J9FHADi?usp=sharing">Garden Documents</a>
                         </li>
-                        <li className="nav-item px-lg-4">
+                        {/* <li className="nav-item px-lg-4">
                         <a className="nav-link text-uppercase text-expanded" href="/purity-painting-finishing">Purity Painting & Finishing</a>
                         </li>
                         <li className="nav-item px-lg-4">
                         <a className="nav-link text-uppercase text-expanded" href="/groasis">Groasis Waterboxx</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item px-lg-4">
                         <a className="nav-link text-uppercase text-expanded" href="/team">Team Page</a>
                         </li>

@@ -22,6 +22,7 @@ class CalendarDash extends React.Component{
         
         return(
             <div>
+                <a href='https://www.facebook.com/pg/aztreesplease.org/events/?ref=page_internal' target='_blank'><button className='btn btn-secondary w-100 mb-3 text-uppercase'>See Events on Facebook</button></a>
                 <Iframe url="https://calendar.google.com/calendar/embed?src=aztreesplease%40gmail.com&ctz=America/Phoenix"
                 width="100%"
                 height='500px'
