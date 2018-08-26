@@ -9,7 +9,7 @@ class Login extends React.Component{
     state = {
         password: '',
         message: '',
-        redirect: false
+        success: false
     }
 
     handleChange = event => {
@@ -32,18 +32,19 @@ class Login extends React.Component{
                 localStorage.setItem('jwtToken', res.data.token);
                 // Redirect to team page if success
                 this.setState({
-                    redirect: true
+                    success: res.data.success,
+                    message: res.data.msg
                 })
             }).catch((err) => {
-                console.log(err);
+                console.log(err.msg);
                 this.setState({
-                    message: 'There has been an issue with the system. Please contact Steven at code@stevenhorkey.com'
+                    message: 'You have likely improperly entered your email and/or password. If not, there has been an issue with the system. Please contact Steven at code@stevenhorkey.com if additional help is needed.'
                 });
             })
     }
 
     render(){
-        if(this.state.redirect){
+        if(this.state.success){
             return(
                 <Redirect to='/team' />
             )

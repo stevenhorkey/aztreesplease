@@ -58,7 +58,7 @@ class Dashboard extends React.Component{
                     <button className="navbar-toggler collapsed ml-auto mr-3" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="text-uppercase raleway">Menu</span>
                     </button>
-                    <span onClick={this.logout} className='text-uppercase raleway text-white cursor-pointer'>Logout <i class="fas fa-sign-out-alt"></i></span>
+                    <span onClick={this.logout} className='text-uppercase raleway text-white cursor-pointer'>Logout <i className="fas fa-sign-out-alt"></i></span>
 
                     <div className="navbar-collapse collapse" id="navbarsExample01">
                         <ul className="navbar-nav mr-auto raleway">
