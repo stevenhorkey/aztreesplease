@@ -49,7 +49,7 @@ class Staff extends React.Component{
                             <div class="card-body text-center">
                                 <img width='200px' src={steven}/>
                                 <div className='mt-4'>
-                                    <h3>Steven Horkey, University of Arizona Cognitive & Computer Science Student - Full Stack Web Developer - Web Design Intern</h3>
+                                    <h3>Steven Horkey, University of Arizona Cognitive & Computer Science Student - Full Stack Web Developer - Web Design Volunteer</h3>
                                 </div>
                             </div>
                         </div>
