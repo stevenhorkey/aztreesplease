@@ -29,7 +29,7 @@ class Navbar extends Component{
                         </a>
                         </li>
                         <li className="nav-item px-lg-4">
-                        <a className="nav-link text-uppercase text-expanded" target='_blank' href="https://signup.com/client/invitation2/secure/2127179/false#/invitation">Sign Up</a>
+                        <a className="nav-link text-uppercase text-expanded" target='_blank' href="https://signup.com/go/TvVUDfX">Sign Up</a>
                         </li>
                         <li className="nav-item px-lg-4">
                         <a className="nav-link text-uppercase text-expanded" target='_blank' href="https://calendar.google.com/calendar/embed?src=aztreesplease%40gmail.com&ctz=America/Phoenix">Events</a>
